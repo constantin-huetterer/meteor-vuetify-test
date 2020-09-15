@@ -2,8 +2,8 @@
   <div>
     <h1>Welcome to Meteor!</h1>
     <v-btn @click="openDialog">Test</v-btn>
-    <hello/>
-    <info/>
+    <hello />
+    <info />
   </div>
 </template>
 
@@ -18,15 +18,19 @@ export default {
   },
   methods: {
     openDialog(){
-      alert('test')
+      alert('test') // Dialog doesn't have to be included to trigger the error
+      // const res = await this.$dialog.confirm({
+      //   text: 'Do you really want to exit?',
+      //   title: 'Warning'
+      // })
     }
   }
 }
 </script>
 
 <style>
-  body {
-    font-family: sans-serif;
-    padding: 10px;
-  }
+body {
+  font-family: sans-serif;
+  padding: 10px;
+}
 </style>
